@@ -13,8 +13,8 @@ typedef struct Trie_ {
 	struct Trie_ *subTries[MAX_DICT]; 
 } Trie;
 
-Trie *trie_initNull(); /*Initializes a trie with a null key. Good for a first node.*/
-Trie *trie_init(char); /*Initializes a trie with a specified key.*/
+Trie *trie_init(); /*Initializes a trie with a null key. Good for a first node.*/
+Trie *trie_initWithKey(char); /*Initializes a trie with a specified key.*/
 void trie_printElement(Trie *trie); /* prints a Trie (somewhat inelegantly) */
 void trie_addElement(Trie *trie, const char *keys, void *data); /* Adds an element. */
 void trie_getElement(Trie *trie, const char *keys, void **dest); /* Repoints dest at the data 
